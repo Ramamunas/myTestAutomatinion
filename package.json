@@ -1,0 +1,24 @@
+{
+  "name": "myTestAutomatinion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "playwright.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@playwright/test": "^1.13.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramamunas/myTestAutomatinion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ramamunas/myTestAutomatinion/issues"
+  },
+  "homepage": "https://github.com/Ramamunas/myTestAutomatinion#readme"
+}
