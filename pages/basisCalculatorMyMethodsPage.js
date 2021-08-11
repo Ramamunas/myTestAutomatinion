@@ -1,13 +1,13 @@
 
 // selektorių pavadinimai pakankamai aiškūs, todėl papildomų konstantų nekūriau (bet galima :) )
 
-exports.basisCalculator_ResultsPage = class basisCalculator_ResultsPage{
+exports.basisCalculatorMyMethodsPage = class basisCalculatorMyMethodsPage{
     constructor (page){
         this.page = page;
     }
     // bus daugiau :)
 /*
-    function getRandomNumberInt(min, max){
+async  getRandomNumberInt(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }*/
 
@@ -36,6 +36,12 @@ async clickCalculateButton(){
 }
 
 async getCalculationResult(){
+    //await this.page.click("#calculateButton");
+    return await this.page.inputValue('#numberAnswerField');
+}
+
+async getCalculationResultClickButton(){
+    await this.page.click("#calculateButton");
     return await this.page.inputValue('#numberAnswerField');
 }
 
@@ -50,6 +56,17 @@ async checkInteger(checkOnOff){
     }
 }
 
+async isIntegerResultSelected(){
+    return await this.page.inputValue('#integerSelect');
+}
+
+async getErrorMesage(){
+    return await this.page.textContent("#errorMsgField");
+}
+
+async enterNumber(fieldNum,value){
+    await this.page.fill(`#number${fieldNum}Field`, String(value));
+}
 
 
 }
